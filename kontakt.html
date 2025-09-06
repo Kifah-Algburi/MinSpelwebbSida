@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mina Favoritspel - Kontakt</title>
+    <link rel="stylesheet" href="stil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Mina Favoritspel</h1>
+        <nav>
+            <ul>
+                 <li><a href="index.html" class="aktiv"><i class="fas fa-home"></i> Startsida</a></li>
+                 <li><a href="spel.html"><i class="fas fa-gamepad"></i> Spel</a></li>
+                 <li><a href="om.html"><i class="fas fa-user"></i> Om Mig</a></li>
+                 <li><a href="kontakt.html"><i class="fas fa-envelope"></i> Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+       <h2>Kontakta Mig</h2>
+<div class="kontakt-container">
+    <!-- Rad 1 -->
+    <div class="box kontakt-form">
+        <h3>Kontakt</h3>
+        <form id="kontaktForm">
+            <div class="form-rad">
+                <div class="form-grupp">
+                    <label for="namn">Namn:</label>
+                    <input type="text" id="namn" name="namn" required>
+                </div>
+                
+                <div class="form-grupp">
+                    <label for="epost">E-post:</label>
+                    <input type="email" id="epost" name="epost" required>
+                </div>
+                
+                <div class="form-grupp">
+                    <label for="amne">Ämne:</label>
+                    <input type="text" id="amne" name="amne" required>
+                </div>
+            </div>
+            
+            <div class="form-grupp">
+                <label for="meddelande">Meddelande:</label>
+                <textarea id="meddelande" name="meddelande" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit">Skicka Meddelande</button>
+        </form>
+    </div>
+
+    <div class="box kontakt-form">
+        <h3>Registrera dig för nyhetsbrev</h3>
+        <form id="nyhetsbrevForm">
+            <div class="form-rad">
+                <div class="form-grupp">
+                    <label for="nyhetsnamn">Namn:</label>
+                    <input type="text" id="nyhetsnamn" name="nyhetsnamn" required>
+                </div>
+                
+                <div class="form-grupp">
+                    <label for="nyhetsepost">E-post:</label>
+                    <input type="email" id="nyhetsepost" name="nyhetsepost" required>
+                </div>
+                
+                <div class="form-grupp">
+                    <label for="losenord">Lösenord:</label>
+                    <input type="password" id="losenord" name="losenord" required>
+                </div>
+            </div>
+            
+            <div class="form-grupp">
+                <label for="spelgenre">Favoritspelgenre:</label>
+                <select id="spelgenre" name="spelgenre">
+                    <option value="action">Action</option>
+                    <option value="rpg">RPG</option>
+                    <option value="sport">Sport</option>
+                    <option value="strategi">Strategi</option>
+                    <option value="annat">Annat</option>
+                </select>
+            </div>
+            
+            <div class="form-grupp">
+                <label for="spelintressen">Dina spelintressen:</label>
+                <textarea id="spelintressen" name="spelintressen" rows="4"></textarea>
+            </div>
+            
+            <div class="form-grupp">
+                <label>
+                    <input type="checkbox" id="villNyhetsbrev" name="villNyhetsbrev">
+                    Jag vill ha nyhetsbrev
+                </label>
+            </div>
+            
+            <button type="submit" id="registreraKnapp">Registrera</button>
+        </form>
+    </div>
+
+    <!-- Rad 2 -->
+    <div class="box kontakt-info">
+        <h3>Kontaktinformation</h3>
+        <div class="kontakt-detaljer">
+            <h4>Besöksadress</h4>
+            <p>Spelvägen 123<br>123 45 Spelstaden</p>
+            
+            <h4>Kontaktuppgifter</h4>
+            <p>📧 E-post: adelmurtaga2@gmail.com <br>
+               📞 Telefon: 08-125500 67<br>
+               📱 Mobil: 070-123 46000</p>
+        </div>
+        
+        <div class="oppettider">
+            <h4>Öppettider</h4>
+            <p>Måndag - Fredag: 09:00 - 17:00<br>
+               Lördag: 10:00 - 15:00<br>
+               Söndag: Stängt</p>
+        </div>
+    </div>
+
+    <div class="box karta">
+        <h3>Karta</h3>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.0176270371673!2d18.06324041610345!3d59.334591381651834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d597e23b17b%3A0x1234567890abcdef!2sStockholm!5e0!3m2!1ssv!2sse!4v1691234567890"
+            width="100%" 
+            height="250" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+</div>
+
+</body>
+</html>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mina Favoritspel. Alla rättigheter förbehållna.</p>
+    </footer>
+
+    <script>
+        document.getElementById('registreringsform').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('registreringsform').classList.add('dold');
+            document.getElementById('tack-meddelande').classList.remove('dold');
+        });
+    </script>
+</body>
+</html>

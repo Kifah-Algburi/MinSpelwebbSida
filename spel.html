@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mina Favoritspel - Spel</title>
+    <link rel="stylesheet" href="stil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Mina Favoritspel</h1>
+        <nav>
+            <ul>
+                 <li><a href="index.html" class="aktiv"><i class="fas fa-home"></i> Startsida</a></li>
+                 <li><a href="spel.html"><i class="fas fa-gamepad"></i> Spel</a></li>
+                 <li><a href="om.html"><i class="fas fa-user"></i> Om Mig</a></li>
+                 <li><a href="kontakt.html"><i class="fas fa-envelope"></i> Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Alla Mina Favoritspel</h2>
+        
+        <section>
+            <h3>Spel Lista</h3>
+            <ul class="spel-lista">
+                <li>Minecraft - Sandlådespel</li>
+                <li>The Legend of Zelda: Breath of the Wild - Actionäventyr</li>
+                <li>Counter-Strike 2 - FPS</li>
+                <li>Fortnite - Battle Royale</li>
+                <li>Among Us - Social Deduction</li>
+                <li>Spider-Man: Miles Morales - Actionäventyr</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Jämförelse av Spel</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Spel</th>
+                        <th>Genre</th>
+                        <th>Platform</th>
+                        <th>Betyg</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Minecraft</td>
+                        <td>Sandlåda</td>
+                        <td>Multiplattform</td>
+                        <td>10/10</td>
+                    </tr>
+                    <tr>
+                        <td>Counter-Strike 2</td>
+                        <td>FPS</td>
+                        <td>PC</td>
+                        <td>9/10</td>
+                    </tr>
+                    <tr>
+                        <td>Among Us</td>
+                        <td>Social Deduction</td>
+                        <td>Multiplattform</td>
+                        <td>8/10</td>
+                    </tr>
+                    <tr>
+                        <td>The Legend of Zelda</td>
+                        <td>Actionäventyr</td>
+                        <td>Nintendo Switch</td>
+                        <td>10/10</td>
+                    </tr>
+                    <tr>
+                        <td>Spider-Man: Miles Morales</td>
+                        <td>Actionäventyr</td>
+                        <td>PlayStation, PC</td>
+                        <td>9/10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="videor-sektion">
+            <h3>Spelvideos</h3>
+            <p>Utforska gameplay, trailers och recensioner av dina favoritspel</p>
+            
+            <div class="video-ruta minecraft">
+                <span class="video-typ">Gameplay</span>
+                <h4>Minecraft - Byggdin egen värld</h4>
+                <video controls>
+                    <source src="video/minecraft-spel.mp4.mp4" type="video/mp4">
+                    <p class="video-laddar">Din webbläsare stöder inte videoelementet.</p>
+                </video>
+                <div class="video-info">
+                    <p><span class="video-tid">Längd:</span> 2:04 minuter</p>
+                    <p><span class="video-upplösning">Upplösning:</span> 1080p HD</p>
+                </div>
+            </div>
+
+            <div class="video-ruta spiderman">
+                <span class="video-typ">Trailer</span>
+                <h4>Spider-Man: Miles Morales</h4>
+                <video controls>
+                    <source src="video/spiderman-film.mp4.mp4" type="video/mp4">
+                    <p class="video-laddar">Din webbläsare stöder inte videoelementet.</p>
+                </video>
+                <div class="video-info">
+                    <p><span class="video-tid">Längd:</span> 00:29 minuter</p>
+                    <p><span class="video-upplösning">Upplösning:</span> 4K Ultra HD</p>
+                </div>
+            </div>
+
+            <div class="video-ruta counterstrike">
+                <span class="video-typ">E-sport</span>
+                <h4>Counter-Strike 2 Tournament</h4>
+                <video controls>
+                    <source src="video/counterstrik-spel.mp4.mp4" type="video/mp4">
+                    <p class="video-laddar">Din webbläsare stöder inte videoelementet.</p>
+                </video>
+                <div class="video-info">
+                    <p><span class="video-tid">Längd:</span> 00:56 minuter</p>
+                    <p><span class="video-upplösning">Upplösning:</span> 1080p HD</p>
+                </div>
+            </div>
+
+            <div class="video-ruta zelda">
+                <span class="video-typ">Äventyr</span>
+                <h4>The Legend of Zelda: Breath of the Wild</h4>
+                <video controls>
+                    <source src="video/zelda-aventyr.mp4.mp4" type="video/mp4">
+                    <p class="video-laddar">Din webbläsare stöder inte videoelementet.</p>
+                </video>
+                <div class="video-info">
+                    <p><span class="video-tid">Längd:</span> 03:49 minuter</p>
+                    <p><span class="video-upplösning">Upplösning:</span> 1440p QHD</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Ladda ner Spelguider</h3>
+            <p>Här kan du ladda ner mina spelguider:</p>
+            <a href="guide-1.pdf" download class="nedladdningsknapp">Ladda ner Spider-Man Guide (PDF)</a>
+            <a href="guide-2.pdf" download class="nedladdningsknapp">Ladda ner  Minecraft Spelguide(PDF)</a>
+            <a href="guide-3.pdf" download class="nedladdningsknapp">Ladda ner The Legend of Zelda (PDF)</a>
+            <a href="guide-4.pdf" download class="nedladdningsknapp">Ladda ner Counter-Strike 2 Spelguide (PDF)</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mina Favoritspel. Alla rättigheter förbehållna.</p>
+    </footer>
+</body>
+</html>

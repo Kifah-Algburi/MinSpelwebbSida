@@ -1,0 +1,590 @@
+/* Grundstilar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Rubriker */
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover, nav a.aktiv {
+    background-color: #3498db;
+}
+
+/* Huvudinnehåll */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+/* Sektioner */
+section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Bildförbättringar */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+.huvudbild {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin: 1.5rem 0;
+}
+
+.profilbild {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    float: left;
+    margin: 0 1.5rem 1rem 0;
+    border: 3px solid #3498db;
+}
+
+/* Spellistor */
+.spel-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 1rem;
+}
+
+.spel {
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.spel img {
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.spel-lista {
+    list-style-position: inside;
+    padding-left: 1rem;
+}
+
+.spel-lista li {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+/* Tabell */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Videodesign - Komplett styling */
+video {
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    margin: 1.5rem 0;
+    background-color: #000;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Videokontainrar */
+.video-ruta {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 15px;
+    border: 1px solid #e9ecef;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.video-ruta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Rubriker för videor */
+.video-ruta h4 {
+    color: #2c3e50;
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+}
+
+/* Video-typ indikator */
+.video-typ {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background-color: #3498db;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Spesifika färger för olika spel */
+.video-ruta.minecraft {
+    border-left: 6px solid #5cb85c;
+    background: linear-gradient(135deg, #ffffff 0%, #f0fff0 100%);
+}
+
+.video-ruta.minecraft .video-typ {
+    background-color: #5cb85c;
+}
+
+.video-ruta.spiderman {
+    border-left: 6px solid #d9534f;
+    background: linear-gradient(135deg, #ffffff 0%, #fff0f0 100%);
+}
+
+.video-ruta.spiderman .video-typ {
+    background-color: #d9534f;
+}
+
+.video-ruta.counterstrike {
+    border-left: 6px solid #5bc0de;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+}
+
+.video-ruta.counterstrike .video-typ {
+    background-color: #5bc0de;
+}
+
+.video-ruta.zelda {
+    border-left: 6px solid #f1c40f;
+    background: linear-gradient(135deg, #ffffff 0%, #fffaf0 100%);
+}
+
+.video-ruta.zelda .video-typ {
+    background-color: #f1c40f;
+    color: #2c3e50;
+}
+
+/* Videokontroller - Naturligt utseende */
+video::-webkit-media-controls-panel {
+    background: transparent !important;
+    filter: invert(1) hue-rotate(180deg) !important;
+}
+
+video::-webkit-media-controls-play-button {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    filter: invert(1) hue-rotate(180deg) !important;
+}
+
+/* Återställ andra kontroller */
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-fullscreen-button {
+    filter: invert(1) hue-rotate(180deg) !important;
+}
+
+/* Responsiv design för mobil */
+@media (max-width: 768px) {
+    .video-ruta {
+        margin: 1.5rem 0;
+        padding: 1.2rem;
+    }
+    
+    .video-ruta h4 {
+        font-size: 1.3rem;
+    }
+    
+    video {
+        margin: 1rem 0;
+        border-radius: 8px;
+    }
+    
+    .video-typ {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.8rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 5px 0;
+    }
+    
+    .spel-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .profilbild {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem;
+    }
+}
+
+/* Video information */
+.video-info {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.video-info p {
+    margin: 0.5rem 0;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.video-tid {
+    font-weight: bold;
+    color: #3498db;
+}
+
+.video-upplösning {
+    font-weight: bold;
+    color: #2ecc71;
+}
+
+/* Laddningsmeddelande */
+.video-laddar {
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+    font-style: italic;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/*Formulär */
+.kontakt-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* två kolumner */
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Box-stil */
+.box {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Rubriker */
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+h3 {
+  margin-bottom: 1rem;
+  color: #34495e;
+}
+
+/* Formulär */
+.kontakt-form {
+  font-size: 0.9rem;
+}
+
+.form-grupp {
+  margin-bottom: 0.8rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Karta iframe */
+.karta iframe {
+  border: 0;
+  border-radius: 6px;
+}
+
+/* Responsiv design */
+@media (max-width: 900px) {
+  .kontakt-container {
+    grid-template-columns: 1fr; /* en kolumn på små skärmar */
+  }
+}
+/* Stilar för Feather Icons */
+nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+nav ul li a:hover {
+    background: rgba(52, 152, 219, 0.1);
+    transform: translateX(5px);
+}
+
+nav ul li a.aktiv {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Ikonstilar */
+nav ul li a i {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover i {
+    stroke: #3498db;
+    transform: scale(1.2);
+}
+
+nav ul li a.aktiv i {
+    stroke: white;
+    animation: ikon-swing 1s ease-in-out;
+}
+
+@keyframes ikon-swing {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    nav ul li a {
+        justify-content: center;
+        text-align: center;
+    }
+}
+/* Om Oss sektion */
+.om-container {
+    overflow: auto;
+}
+
+/* Dold klass */
+.dold {
+    display: none;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+/* Team Section Styles - Utan bilder */
+.team-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+.team-section h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.team-member {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid #3498db;
+}
+
+.team-member h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.team-role {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.team-member p:last-child {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 5px 0;
+    }
+    
+    .spel-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .profilbild {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem;
+    }
+    
+    .om-container {
+        text-align: center;
+    }
+}
